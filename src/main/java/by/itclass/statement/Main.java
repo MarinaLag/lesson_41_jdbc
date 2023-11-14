@@ -1,4 +1,4 @@
-package by.itclass.ctatement;
+package by.itclass.statement;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,9 +20,11 @@ public class Main {
             //делаем запрос к БД
             String query = "INSERT INTO staff(name,age,department,project) VALUE ('employee11',27,5,3)";
            // на объекте вызываем метод, который  превращает строку в запрос
-            st.execute(query);
+            st.execute(query);//возвращает boolean
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
+
     }
 }
